@@ -1,0 +1,84 @@
+/* Estructura del índice */
+#TOC {
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    padding: 0; /* Ajustado para que el azul toque los bordes */
+    overflow: hidden;
+}
+
+/* Espaciado de los enlaces */
+#TOC a {
+    padding: 5px 15px;
+    display: block;
+    color: #333333 !important;
+    text-decoration: none;
+}
+
+/* 1. APAGAR el rastreador automático de Quarto */
+#TOC a.active {
+    background-color: transparent !important;
+    color: #333333 !important;
+}
+
+/* 2. ENCENDER el azul al pasar el mouse O cuando reciba nuestra clase por clic */
+#TOC a:hover,
+#TOC a.fijar-azul {
+    background-color: #337ab7 !important;
+    color: #ffffff !important;
+}
+
+/* ---------------------------------------------------
+   JERARQUÍA DE LA TABLA DE CONTENIDOS (TOC)
+   --------------------------------------------------- */
+
+/* Nivel 1 (Tus secciones principales ##) - Tamaño base y un poco más gruesas */
+#TOC > ul > li > a {
+    font-size: 15px;
+    font-weight: normal;
+}/* ---------------------------------------------------
+   JERARQUÍA DE LA TABLA DE CONTENIDOS (TOC)
+   --------------------------------------------------- */
+
+/* Nivel 1 (Tus secciones principales ##) - Tamaño base y un poco más gruesas */
+#TOC > ul > li > a {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+/* Nivel 2 (Tus subsecciones ###) - Letra más pequeña y tabulada */
+#TOC ul ul > li > a {
+    font-size: 13px;
+    padding-left: 30px !important; /* Aplica la tabulación */
+    font-weight: normal;
+}
+
+/* Nivel 3 (Tus sub-subsecciones ####) - Aún más pequeña y con doble tabulación */
+#TOC ul ul ul > li > a {
+    font-size: 12px;
+    padding-left: 45px !important; /* Sangría más profunda */
+}
+
+/* Nivel 2 (Tus subsecciones ###) - Letra más pequeña y tabulada */
+#TOC ul ul > li > a {
+    font-size: 13.5px;
+    padding-left: 30px !important; /* Aplica la tabulación */
+    font-weight: normal;
+}
+
+/* Nivel 3 (Tus sub-subsecciones ####) - Aún más pequeña y con doble tabulación */
+#TOC ul ul ul > li > a {
+    font-size: 12px;
+    padding-left: 45px !important; /* Sangría más profunda */
+}
+/* ===================================================
+   ESTILO DEL BOTÓN SHOW/HIDE CÓDIGO (BOTÓN EXTERNO ARRIBA A LA DERECHA)
+   =================================================== */
+
+   details.code-fold > summary {
+       display: none !important;
+   }
+
+   /* Quitar los bordes grises y ajustar la caja del código para que se vea normal */
+   details.code-fold {
+       margin-bottom: 1em;
+   }
